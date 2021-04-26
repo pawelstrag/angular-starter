@@ -1,0 +1,72 @@
+{
+  "root": true,
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "ecmaVersion": 2020,
+        "project": ["tsconfig.json", "tsconfig.app.json"],
+        "createDefaultProgram": true
+      },
+      "extends": ["plugin:@angular-eslint/recommended", "airbnb-typescript/base", "prettier"],
+      "rules": {
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@typescript-eslint/consistent-type-definitions": "error",
+        "@typescript-eslint/explicit-member-accessibility": [
+          "off",
+          {
+            "accessibility": "explicit"
+          }
+        ],
+        "@typescript-eslint/unbound-method": [
+          "error",
+          {
+            "ignoreStatic": true
+          }
+        ],
+        "arrow-parens": ["off", "always"],
+        "brace-style": ["error", "1tbs"],
+        "import/order": "off",
+        "max-len": [
+          "error",
+          {
+            "ignorePattern": "^import .*",
+            "ignoreUrls": true,
+            "code": 140
+          }
+        ],
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+        "no-param-reassign": ["error", { "props": false }],
+        "class-methods-use-this": "off",
+        "import/no-unresolved": "off",
+        "import/prefer-default-export": "off",
+        "import/no-default-export": "error",
+        "import/no-extraneous-dependencies": "off",
+        "@typescript-eslint/class-methods-use-this": "off",
+        "@typescript-eslint/lines-between-class-members": "off",
+        "prettier/prettier": "error"
+      }
+    },
+    {
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended"],
+      "plugins": ["prettier"],
+      "rules": {}
+    }
+  ]
+}
