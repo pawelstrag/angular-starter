@@ -59,7 +59,12 @@
         "import/no-extraneous-dependencies": "off",
         "@typescript-eslint/class-methods-use-this": "off",
         "@typescript-eslint/lines-between-class-members": "off",
-        "prettier/prettier": "error"
+        "prettier/prettier": "error",
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error"
       }
     },
     {
@@ -67,6 +72,14 @@
       "extends": ["plugin:@angular-eslint/template/recommended"],
       "plugins": ["prettier"],
       "rules": {}
+    },
+    {
+      "files": ["*.spec.ts"],
+      "extends": ["plugin:jest/recommended"],
+      "rules": {
+        "@typescript-eslint/unbound-method": "off",
+        "jest/unbound-method": "off"
+      }
     }
   ]
 }
