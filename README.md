@@ -1,21 +1,40 @@
-## About
+# Angular Starter
 [![build status](https://github.com/pawelstrag/angular-starter/workflows/Build/badge.svg)](https://github.com/pawelstrag/angular-starter/actions)
 
-The Angular starter app. Installation contains:
-* Angular 11
-* ESLint
-* Airbnb code style guide with TypeScript  
+Angular Starter is a basic but preconfigured Angular 11 project for anyone who wants to create their own Angular applications.
+In contrast to the standard project, it contains the following upgrades:
+* ESLint as a TSLint replacement
+* Airbnb style guide with TypeScript  
 * Prettier
-* Jest
+* Jest as a Jasmine replacement
 
-## Setup
+## Prerequisites
 
-Run `npm install` to install all dev dependencies.
+Before you begin, ensure you have met the following requirements:
+* You have installed the latest version of [Node.js](<https://nodejs.org/en/>)
+* You have installed the latest version od Angular CLI `npm install -g @angular/cli`
 
-## Build
+## Installing
+To install Angular Starter, install all npm dependencies:
+```
+npm install
+```
 
-Run `npm run start` to start the project.
+## Using
+To use Angular Starter, use the following commands:
+```
+# Run application
+npm run start
+
+# Run tests
+npm run test
+
+# Check code coverage
+npm run test:coverge
+
+# Run ESLint
+npm run lint
+```
 
 ## License
-
-The code in this repository is distributed under the terms of the MIT license.
+This project uses the following license: [MIT](<https://github.com/pawelstrag/angular-starter/blob/master/LICENSE>).
